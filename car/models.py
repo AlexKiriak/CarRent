@@ -1,13 +1,4 @@
 from django.db import models
-#
-#
-# class Car(models.Model):
-#     car_name = models.TextField(unique=True)
-#     car_trans = models.TextField()
-#     car_price = models.TextField()
-#     car_man_year = models.TextField()
-#     car_img = models.TextField(unique=True)
-
 
 class Car(models.Model):
     car_id = models.IntegerField(primary_key=True)
@@ -21,6 +12,7 @@ class Car(models.Model):
     park = models.ForeignKey('Park', models.DO_NOTHING, blank=True, null=True)
     station = models.ForeignKey('Station', models.DO_NOTHING, blank=True, null=True)
     car_img = models.TextField(blank=True, null=True)
+    car_desc = models.TextField(blank=True, null=True)
 
     class Meta:
         managed = False
