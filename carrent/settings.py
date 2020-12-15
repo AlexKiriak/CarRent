@@ -28,6 +28,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'car',
     'park',
+    'ordr',
+    'usr',
+    'station',
     'corsheaders',
 ]
 

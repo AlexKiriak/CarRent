@@ -10,9 +10,9 @@ from car.serializers import CarSerializer
 def car_list(request):
     cars = Car.objects.all()
 
-    name = request.GET.get('name', None)
-    if name is not None:
-        cars = cars.filter(name__icontains=name)
+    car_name = request.GET.get('car_name', None)
+    if car_name is not None:
+        cars = cars.filter(car_name__icontains=car_name)
 
     cars_serializer = CarSerializer(cars, many=True)
     return JsonResponse(cars_serializer.data, safe=False)

@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Car(models.Model):
     car_id = models.IntegerField(primary_key=True)
     car_name = models.CharField(max_length=50, blank=True, null=True)
